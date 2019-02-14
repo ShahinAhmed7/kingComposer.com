@@ -220,28 +220,7 @@ add_shortcode('slide_shortcode', 'main_slider_shortcode');
 
 
 
-//industry section title shortcode
-function call_to_action_shortcode($atts){
-    extract( shortcode_atts( array(
-        'cta_title' => '',
-    ), $atts) );
-     
 
-    $cta_shortcore = '<div class="cta-area">';
-    $cta_shortcore .= '<h2>'.esc_html($cta_title).'</h2>';
-    $cta_shortcore .= '</div>';
-   
-
-    return $cta_shortcore;
-
-}
-add_shortcode('cta_shortcore', 'call_to_action_shortcode');  
-
-
-
-
-
-jhbjhj
 
 
 
