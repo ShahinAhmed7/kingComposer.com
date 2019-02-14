@@ -96,8 +96,42 @@
     color: #f3ca32;
 }
 
+/*tabs & testimonial css*/
+.kc-testimo .content-desc {
+    background: #f8f9fc;
+    padding: 30px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+}
 
+ul.kc_tabs_nav.ui-tabs-nav.kc_clearfix a {
+    padding: 0px 20px;
+    background: #fff;
+    border-left: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+}
 
+.kc_wrapper.ui-tabs.kc_clearfix {background: #fff;}
+
+.kc_tabs_nav~.kc_tab.ui-tabs-body-active {
+    background: none !important;
+    border: 1px solid #dfdfdf;
+}
+
+.kc_tabs>.kc_wrapper>.kc_tabs_nav {
+    background: none !important;
+}
+
+ul.kc_tabs_nav.ui-tabs-nav.kc_clearfix li:last-child a {
+    border-right: 1px solid #dfdfdf;
+}
+
+ul.kc_tabs_nav.ui-tabs-nav.kc_clearfix li.ui-tabs-active a {
+    background: #f3f3f3;
+}
 
 
 
