@@ -1,0 +1,114 @@
+.section-title h4 {
+    font-size: 12px;
+    opacity: .7;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.section-title p {
+    color: #666666;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/*service box css*/
+.service-box-markup {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.service-box-markup h2 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.service-icon i {
+    font-size: 68px;
+    color: #f3cc3a;
+}
+
+.service-icon {
+    margin-bottom: 40px;
+}
+
+.service-box-image {
+    margin-bottom: 40px;
+}
+
+/*slide css*/
+.single-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    height: 600px;
+    display: table;
+    width: 100%;
+}
+
+.single-slide-table {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.single-slide h2 {
+    font-weight: 700;
+    font-size: 33px;
+    margin-bottom: 30px;
+}
+
+.single-slide p {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.owl-nav div {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    font-size: 40px;
+    color: #647177;
+}
+
+.owl-nav .owl-next {
+    left: auto;
+    right: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

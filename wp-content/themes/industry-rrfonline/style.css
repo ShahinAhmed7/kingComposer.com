@@ -1,0 +1,238 @@
+/*!
+Theme Name: Industry RRFOnline
+Theme URI: http://underscores.me/
+Author: Shahin Ahmed
+Author URI: http://shahin.me
+Description: King Composer WordPress Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: industry-rrfonline
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+body{
+	font-family: 'Montserrat', sans-serif;
+    line-height: 1.9;
+}
+
+.header-bottom-area {
+    background-color: #293237;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+}
+
+.site-branding h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.site-branding a {
+    color: #212628;
+}
+
+.header-right-btn {
+    text-align: right;
+}
+
+.header-right-btn a {
+    background: #4bbc33;
+    color: #fff;
+    padding: 10px 25px;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+
+.header-right-btn a:after, .header-right-btn a:before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 5px;
+    width: 5px;
+    content: "";
+    background: #fff;
+    border-radius: 100px;
+    opacity: .5;
+}
+
+.header-right-btn a:after {
+    top: auto;
+    bottom: 5px;
+}
+
+.header-right-btn a:last-child:after, .header-right-btn a:last-child:before {
+    left: auto;
+    right: 5px;
+}
+
+.header-right-btn a:last-child {
+    background-color: #637177;
+}
+
+.header-top-area {
+    padding: 20px 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a, input[type="submit"], button {
+    transition: .4s;
+}
+
+.header-bottom-area ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-bottom-area li {
+    position: relative;
+    display: inline-block;
+}
+
+.header-bottom-area li a {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header-bottom-area li:first-child a {
+    padding-left: 0;
+}
+
+.header-bottom-area li:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 30px;
+    width: 1px;
+    content: "";
+    background: #fff;
+    margin-top: -12px;
+    opacity: .3;
+}
+
+.header-bottom-area li:last-child:after {
+    background: none;
+}
+
+.header-search-form input[type="submit"] {
+    position: absolute;
+    right: 22px;
+    top: 13px;
+    background: none;
+    color: #fff;
+    border: none;
+}
+
+.header-search-form label {
+    width: 100%;
+}
+
+.header-search-form input[type="search"] {
+    background: none;
+    border: none;
+    width: 78%;
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.header-search-form {
+    background: #212527;
+    padding: 5px;
+    margin-top: 7px;
+    border: 1px solid #505457;
+}
+
+.header-search-form input:focus {
+    border: none;
+    outline: 0;
+}
+
+.footer-top-area {
+    background-color: #262b2d;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.footer-top-area a {
+    color: #fff;
+    opacity: .5;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer-top-area h2 {
+    color: #fff;
+}
+
+.footer-top-area p {
+    color: #fff;
+    opacity: .5;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer-top-area .widget {
+    float: left;
+    width: 24%;
+}
+
+.footer-top-area .widget:nth-child(2), .footer-top-area .widget:nth-child(3) {
+    width: 17%;
+}
+
+.footer-top-area .widget strong{
+	color: #fff;
+	opacity: .9;
+	font-size: 15px;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+
+
+.footer-top-area .widget h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.site-info {
+    background: #212527;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 13px;
+    color: #949596;
+}
+
+.site-info a {
+    color: #949596;
+    font-size: 13px;
+}
+
+.footer-top-area ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-top-area .widget:nth-child(1) {
+    width: 18%;
+}
