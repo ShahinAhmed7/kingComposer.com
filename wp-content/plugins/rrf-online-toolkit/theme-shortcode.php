@@ -75,6 +75,45 @@ add_shortcode('service_box', 'service_box_shortcode');
 
 
 
+//industry service box shortcode
+function service_box_shortcode2($atts){
+    extract( shortcode_atts( array(
+        'img' => '',
+        'title' => '',
+        'description' => '',
+        'link' => ''
+    ), $atts) );
+
+
+    $service_box2 ='<div class="service-box-markup2">';
+
+    	$service_image_array = wp_get_attachment_image_src($img, 'large' );
+    	$service_box2 .='<div class="service-box-image2">
+			<img src="'.esc_url($service_image_array[0]).'" alt="'.esc_html($title).'">
+    	</div>';
+
+
+    if(!empty($title)) {
+    	 $service_box2 .= '<h2>'.esc_html($title).'</h2>';
+    }
+
+    if(!empty($description)) {
+    	 $service_box2 .= ''.wpautop( esc_html($description) ).'';
+    }
+
+     if(!empty($link)) {
+    	 $service_box2 .= '<a class="boxed-btn" href="" targer=""></a>';
+    }
+
+    $service_box2 .= '</div>';
+
+    return $service_box2;
+
+}
+add_shortcode('service_box2', 'service_box_shortcode2');  
+
+
+
 
 
 // slider custom post register

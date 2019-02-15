@@ -97,9 +97,49 @@ function theme_kc_addon_name() {
 	        )
 	    ); // End add map
 
+
 	    kc_add_map(
 	        array(
-        	// Service box adddon
+	        	// Service box 2 adddon
+	            'service_box2' => array(
+	                'name' => 'Service Box 2',
+	                'description' => __('Service box addons', 'KingComposer'),
+	                'icon' => 'sl-paper-plane',
+	                'category' => 'My-Theme',
+	                'params' => array(
+	                    array(
+	                        'name' => 'img',
+	                        'label' => 'Upload Image',
+	                        'type' => 'attach_image',
+	                        'description' => 'Upload image here.',
+	                    ),
+	                    array(
+	                        'name' => 'title',
+	                        'label' => 'Title',
+	                        'type' => 'text',
+	                        'description' => 'Type text here.',
+	                    ),
+	                    array(
+	                        'name' => 'description',
+	                        'label' => 'Description',
+	                        'type' => 'textarea',
+	                        'description' => 'Type Details content here.',
+	                    ),
+	                    array(
+	                        'name' => 'link',
+	                        'label' => 'Link',
+	                        'type' => 'link',
+	                        'description' => ''
+	                    ),
+	                )
+	            ),  // End of elemnt kc_icon 
+
+	        )
+	    ); // End add map
+
+	    kc_add_map(
+	        array(
+        	// Slider adddon
             'slide_shortcode' => array(
                 'name' => 'Slider',
                 'description' => __('Slider addons', 'KingComposer'),
