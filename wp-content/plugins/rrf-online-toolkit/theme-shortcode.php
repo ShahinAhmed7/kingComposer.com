@@ -99,14 +99,20 @@ add_action( 'init', 'custom_post_slide' );
 // slider shortcode
 function main_slider_shortcode($atts){
     extract( shortcode_atts( array(
-        'count' => 2,
-        'type' => 'page',
+        'count' => 3,
+        'loop' => 'true',
+        'nav' => 'true',
+        'autoplay' => 'false',
+        'dots' => 'false',
+        'height' => '600',
+        'autoPlayTimeout' => 6000,
+
     ), $atts) );
      
 
      $arg = array(
      	'post_type' => 'home-slider',
-     	'posts_per_page' => -1
+     	'posts_per_page' => $count
      );
     $get_post = new WP_Query($arg);
 
@@ -118,10 +124,11 @@ function main_slider_shortcode($atts){
 		jQuery(window).load(function(){
 			jQuery("#home-slide-markup-'.$slider_random_number.'").owlCarousel({
 				items: 1,
-				loop: true,
-				nav: true,
-				autoplay: false,
-				dots: false,
+				loop: '.$loop.',
+				autoPlayTimeout:'.$autoPlayTimeout.',
+				nav: '.$nav.',
+				autoplay: '.$autoplay.',
+				dots: '.$dots.',
 				navText: ["<i class=\'fa fa-angle-left\'></i>", "<i class=\'fa fa-angle-right\'></i>"]
 			});
 		});
@@ -132,7 +139,7 @@ function main_slider_shortcode($atts){
     	while($get_post->have_posts()) : $get_post->the_post();
     	$post_id = get_the_ID();
     	$slide_shortcode .='
-			<div style="background-image:url('.get_the_post_thumbnail_url($post_id, 'large').')" class="single-slide">
+			<div style="height:'.$height.'px;background-image:url('.get_the_post_thumbnail_url($post_id, 'large').')" class="single-slide">
 				<div class="single-slide-table">
 					<div class="container">
 						<div class="row">

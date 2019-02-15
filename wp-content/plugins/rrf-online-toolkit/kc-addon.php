@@ -96,6 +96,89 @@ function theme_kc_addon_name() {
 
 	        )
 	    ); // End add map
+
+	    kc_add_map(
+	        array(
+        	// Service box adddon
+            'slide_shortcode' => array(
+                'name' => 'Slider',
+                'description' => __('Slider addons', 'KingComposer'),
+                'icon' => 'sl-paper-plane',
+                'category' => 'My-Theme',
+                'params' => array(
+                    array(
+                        'name' => 'count',
+                        'label' => 'Slides count',
+                        'type' => 'text',
+						'description' => '',
+						'value' => 3
+                    ),
+                    array(
+                        'name' => 'height',
+                        'label' => 'Slides height',
+                        'type' => 'text',
+						'description' => '',
+						'value' => 600
+                    ),
+                    array(
+                        'name' => 'loop',
+                        'label' => 'Loop',
+                        'type' => 'select',
+						'options' => array(  // THIS FIELD REQUIRED THE PARAM OPTIONS
+							'true' => 'Yes',
+							'false' => 'No',
+							),
+						'description' => '',
+						'value' => 'true'
+	                    ),
+                    array(
+                        'name' => 'nav',
+                        'label' => 'Nav',
+                        'type' => 'select',
+						'options' => array(  // THIS FIELD REQUIRED THE PARAM OPTIONS
+							'true' => 'Yes',
+							'false' => 'No',
+							),
+							'description' => '',
+							'value' => 'true'
+	                    ),
+                    array(
+                        'name' => 'autoplay',
+                        'label' => 'Autoplay',
+                        'type' => 'select',
+						'options' => array(  // THIS FIELD REQUIRED THE PARAM OPTIONS
+							'true' => 'Yes',
+							'false' => 'No',
+							),
+							'description' => '',
+							'value' => 'true'
+	                    ),
+                    array(
+                        'name' => 'autoPlayTimeout',
+                        'label' => 'Slides count timeout',
+                        'type' => 'text',
+						'description' => 'Type slides in mili seconds',
+						'value' => 5000,
+						'relation' => array(
+					        'parent'    => 'autoplay',
+					        'show_when' => 'true'
+					    ),
+                    ),
+                    array(
+                        'name' => 'dots',
+                        'label' => 'Dots',
+                        'type' => 'select',
+						'options' => array(  // THIS FIELD REQUIRED THE PARAM OPTIONS
+							'true' => 'Yes',
+							'false' => 'No',
+							),
+							'description' => '',
+							'value' => 'false'
+	                    ),
+                    ),
+	            ),  // End of elemnt kc_icon 
+	        )
+	    ); // End add map
 	
 	} // End if
 
