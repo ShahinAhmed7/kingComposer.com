@@ -35,9 +35,9 @@
     color: #f3cc3a;
 }
 
-.service-icon {
+/*.service-icon {
     margin-bottom: 40px;
-}
+}*/
 
 .service-box-image {
     margin-bottom: 40px;
@@ -134,11 +134,50 @@ ul.kc_tabs_nav.ui-tabs-nav.kc_clearfix li.ui-tabs-active a {
 }
 
 
+/*service box 2 css*/
+.service-box-image2 h2 {
+    font-size: 16px;
+}
+
+.service-box-markup2 h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+a.boxed-btn {
+    background: #f3ca32;
+    padding: 9px 34px;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.service-box-markup2 {
+    padding: 10px;
+    background: #fff;
+    padding-bottom: 20px;
+    border-radius: 3px;
+}
 
 
+/*cta css*/
+.kc-elm .cta-title h3 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #262b2d;
+    margin-bottom: 0;
+}
 
-
-
+.cta-btn {
+    background: #262b2d;
+    font-size: 12px;
+    color: #fff;
+    padding: 15px 60px;
+    display: inline-block;
+    border-radius: 40px;
+    text-transform: uppercase;
+}
 
 
 

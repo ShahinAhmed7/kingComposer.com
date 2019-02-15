@@ -18,6 +18,9 @@ body{
 	font-family: 'Montserrat', sans-serif;
     line-height: 1.9;
 }
+img {
+    max-width: 100%;
+}
 
 .header-bottom-area {
     background-color: #293237;

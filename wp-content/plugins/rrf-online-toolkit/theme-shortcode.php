@@ -87,22 +87,23 @@ function service_box_shortcode2($atts){
 
     $service_box2 ='<div class="service-box-markup2">';
 
-    	$service_image_array = wp_get_attachment_image_src($img, 'large' );
-    	$service_box2 .='<div class="service-box-image2">
-			<img src="'.esc_url($service_image_array[0]).'" alt="'.esc_html($title).'">
-    	</div>';
+        $service_image_array = wp_get_attachment_image_src($img, 'large' );
+        $service_box2 .='<div class="service-box-image2">
+            <img src="'.esc_url($service_image_array[0]).'" alt="'.esc_html($title).'">
+        </div>';
 
 
     if(!empty($title)) {
-    	 $service_box2 .= '<h2>'.esc_html($title).'</h2>';
+         $service_box2 .= '<h2>'.esc_html($title).'</h2>';
     }
 
     if(!empty($description)) {
-    	 $service_box2 .= ''.wpautop( esc_html($description) ).'';
+         $service_box2 .= ''.wpautop( esc_html($description) ).'';
     }
 
      if(!empty($link)) {
-    	 $service_box2 .= '<a class="boxed-btn" href="" targer=""></a>';
+        $link_array = explode('|', $link);
+         $service_box2 .= '<a class="boxed-btn" href="'.$link_array[0].'" targer="'.$link_array[2].'">'.$link_array[1].'</a>';
     }
 
     $service_box2 .= '</div>';
@@ -111,6 +112,27 @@ function service_box_shortcode2($atts){
 
 }
 add_shortcode('service_box2', 'service_box_shortcode2');  
+
+
+
+
+
+//industry call to action shortcode
+function call_to_action($atts){
+    extract( shortcode_atts( array(
+        'link' => ''
+    ), $atts) );
+
+    $cta_ ='<div class="call_to_action_btn">';
+         if(!empty($link)) {
+        $link_array = explode('|', $link);
+         $cta_ .= '<a class="cta-btn" href="'.$link_array[0].'" targer="'.$link_array[2].'">'.$link_array[1].'</a>';
+    }
+    $cta_ .='</div>';
+
+    return $cta_;
+}
+add_shortcode('cta_', 'call_to_action');  
 
 
 

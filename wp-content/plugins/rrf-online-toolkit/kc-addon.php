@@ -137,6 +137,28 @@ function theme_kc_addon_name() {
 	        )
 	    ); // End add map
 
+
+	    kc_add_map(
+	        array(
+	        	// Call to action button adddon
+	            'cta_' => array(
+	                'name' => 'Call to action button',
+	                'description' => __('Call to action addons', 'KingComposer'),
+	                'icon' => 'sl-paper-plane',
+	                'category' => 'My-Theme',
+	                'params' => array(
+	                    array(
+	                        'name' => 'link',
+	                        'label' => 'Link',
+	                        'type' => 'link',
+	                        'description' => ''
+	                    ),
+	                )
+	            ),  // End of elemnt kc_icon 
+
+	        )
+	    ); // End add map
+
 	    kc_add_map(
 	        array(
         	// Slider adddon
