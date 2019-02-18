@@ -147,7 +147,7 @@ function custom_post_slide() {
                 'name' => __( 'Slider' ),
                 'singular_name' => __( 'Slide' )
             ),
-            'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+            'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
             'public' => false,
             'show_ui' => true
         )
