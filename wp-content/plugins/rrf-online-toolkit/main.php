@@ -30,6 +30,23 @@ include_once('kc-addon.php');
 
 
 
+//  page list
+function crazy_toolkit_get_page_as_list(){
+    $args = wp_parse_args( array(
+            'post_type' => 'page',
+            'numberposts' => '-1'
+     ));
+
+    $posts = get_posts( $args);
+
+    $post_options = array(esc_html__('-- selest page--', 'crazy-toolkit')=>'');
+    if( $posts ) {
+        foreach ($posts as $post){
+            $post_options[$post->post_title] = $post->ID;
+        }
+    }
+    return  $post_options;
+}
 
 
 

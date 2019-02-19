@@ -199,14 +199,85 @@ function main_slider_shortcode($atts){
     <div id="home-slide-markup-'.$slider_random_number.'" class="home-slide-markup">';
     	while($get_post->have_posts()) : $get_post->the_post();
     	$post_id = get_the_ID();
+
+
+        // optional slide meta theme color start
+        if(get_post_meta( $post_id, 'theme_slide_meta', true )){
+            $slide_meta = get_post_meta( $post_id, 'theme_slide_meta', true );
+        } else{
+            $slide_meta = array();
+        }
+
+        if(array_key_exists('text_color', $slide_meta)) {
+            $text_color = $slide_meta['text_color'];
+        } else{
+            $text_color = '#333';
+        }
+
+        if(array_key_exists('enable_overlay', $slide_meta)) {
+            $enable_overlay = $slide_meta['enable_overlay'];
+        } else{
+            $enable_overlay = false;
+        }
+
+        if(array_key_exists('overlay_color', $slide_meta)) {
+            $overlay_color = $slide_meta['overlay_color'];
+        } else{
+            $overlay_color = '#333';
+        }
+
+        if(array_key_exists('overlay_opacity', $slide_meta)) {
+            $overlay_opacity = $slide_meta['overlay_opacity'];
+        } else{
+            $overlay_opacity = 70;
+        }
+
+        // optional slide meta theme color end
+
+
+
+        //button shortcode meta start
+        if(array_key_exists('buttons', $slide_meta)){
+            $buttons = $slide_meta['buttons'];
+        }else{
+            $buttons = '';
+        }
+        //button shortcode meta end
+
+
     	$slide_shortcode .='
-			<div style="height:'.$height.'px;background-image:url('.get_the_post_thumbnail_url($post_id, 'large').')" class="single-slide">
+			<div style="height:'.$height.'px;background-image:url('.get_the_post_thumbnail_url($post_id, 'large').')" class="single-slide">';
+            if($enable_overlay == true){
+                $slide_shortcode .='
+            <div style="opacity:.'.$overlay_opacity.';background-color:'.$overlay_color.'" class="slide-overlay"></div>';
+            }
+            $slide_shortcode .='
 				<div class="single-slide-table">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6">
+							<div style="color:'.$text_color.'" class="col-md-6">
 								<h2>'.get_the_title($post_id).'</h2>
-								'.get_the_content($post_id).'
+								'.get_the_content($post_id).'';
+
+                        // slider button shortcode start
+                        if(!empty($buttons)){
+                             $slide_shortcode .='
+                             <div class="slide-btn">';
+                             foreach($buttons as $button){
+                                if($button['link_type'] == '1'){
+                                    $link = get_page_link( $button['link_to_page']);
+                                } else{
+                                    $link = $button['external_link'];
+                                }
+       $slide_shortcode .=' <a href="'.$link.'" class="slider-btn button-'.$button['type'].'">'.$button['text'].'</a>';
+                             }
+                            $slide_shortcode .= '</div>';
+                        }
+                          // slider button shortcode end
+
+                        $slide_shortcode .='
+
+
 							</div>
 						</div>
 					</div>

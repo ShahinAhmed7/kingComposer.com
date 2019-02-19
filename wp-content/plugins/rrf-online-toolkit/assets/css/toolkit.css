@@ -52,6 +52,17 @@
     height: 600px;
     display: table;
     width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.slide-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #111;
+    z-index: -1;
 }
 
 .single-slide-table {
@@ -63,6 +74,7 @@
     font-weight: 700;
     font-size: 33px;
     margin-bottom: 30px;
+    color: inherit;
 }
 
 .single-slide p {
@@ -81,7 +93,13 @@
     left: auto;
     right: 50px;
 }
-
+.slider-btn {
+    padding: 11px 40px;
+    display: inline-block;
+    background: #84d54d;
+    color: #fff;
+    margin-top: 32px;
+}
 
 /*call to action css*/
 

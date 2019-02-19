@@ -7,7 +7,7 @@ $options        = array();
 
 
 $options[]    = array(
-    'id'        => 'slide_metabox',
+    'id'        => 'theme_slide_meta',
     'title'     => 'Slides Options',
     'post_type' => 'home-slider',
     'context'   => 'normal',
@@ -16,11 +16,66 @@ $options[]    = array(
         array(
             'name'  => 'theme_slides_metabox',
             'fields' => array(
+
+            	array(
+					  'id'               => 'buttons',
+					  'type'             => 'group',
+					  'title'            => 'Sliders Button',
+					  'button_title'     => 'Add new',
+					  'accordion-title'  => 'Add new button',
+					  'fields'    => array(
+					    array(
+					      'id'    => 'type',
+					      'type'  => 'select',
+					      'title' => 'Button Type',
+					      'options' =>	array(
+					      	'bordered' => 'Bordered button',
+					      	'filled' => 'Filled button',
+					      	),
+					    ),
+					    array(
+					      'id'    => 'text',
+					      'type'  => 'text',
+					      'title' => 'Button text',
+					      'default' => 'Slide button',
+					    ),
+					    array(
+					      'id'    => 'link_type',
+					      'type'  => 'select',
+					      'title' => 'Link type',
+					      'options' => array(
+					      	'1' => 'WordPress page',
+					      	'2' => 'External link',
+					      ),
+					    ),
+					    array(
+					      'id'    => 'link_to_page',
+					      'type'  => 'select',
+					      'title' => 'Link to page',
+					      'options' => 'page',
+					      'dependency' => array('link_type', '==', '1')
+					    ),
+					    array(
+					      'id'    => 'external_link',
+					      'type'  => 'text',
+					      'title' => 'External link',
+					      'dependency' => array('link_type', '==', '2')
+					    ),
+					  ),
+					),
+
                 array(
                     'id'    => 'text_color',
                     'type'  => 'color_picker',
                     'title' => 'Slides text color',
                     'default' => '#333'
+                ), 
+                array(
+                    'id'    => 'overlay_color',
+                    'type'  => 'color_picker',
+                    'title' => 'Slides overlay color',
+                    'default' => '#333',
+                    'dependency' => array('enable_overlay', '==', 'true')
                 ), 
                 array(
                     'id'    => 'enable_overlay',
@@ -50,7 +105,7 @@ $options[]    = array(
     'priority'  => 'high',
     'sections'  => array(
         array(
-            'name'  => 'theme_page_metabox',
+            'name'  => 'theme__metabox',
             'fields' => array(
                 array(
                     'id'    => 'text_color',
