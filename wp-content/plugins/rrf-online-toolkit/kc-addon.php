@@ -100,10 +100,109 @@ function theme_kc_addon_name() {
 
 	    kc_add_map(
 	        array(
+	        	// Counetr box adddon
+	            'counetr_box' => array(
+	                'name' => 'Counter Box',
+	                'description' => __('Counter box addons', 'KingComposer'),
+	                'icon' => 'sl-paper-plane',
+	                'category' => 'My-Theme',
+	                'params' => array(
+	                    array(
+	                        'name' => 'icon_type',
+	                        'label' => 'Icon type',
+	                        'type' => 'select',
+	                        'options' => array(  // THIS FIELD REQUIRED THE PARAM OPTIONS
+								'1' => 'Select icon',
+								'2' => 'Upload Icon',
+							),
+							'description' => 'Select Counter box icon',
+							'value' => 1
+	                    ),
+	                    array(
+	                        'name' => 'fa_icon',
+	                        'label' => 'Icon',
+	                        'type' => 'icon_picker',
+	                        'description' => 'Chose icon here.',
+	                        'relation' => array(
+						        'parent'    => 'icon_type',
+						        'show_when' => '1'
+						    )
+	                    ),
+	                    array(
+	                        'name' => 'img_icon',
+	                        'label' => 'Image icon',
+	                        'type' => 'attach_image',
+	                        'description' => 'Upload image icon.',
+	                        'relation' => array(
+						        'parent'    => 'icon_type',
+						        'show_when' => '2'
+						    )
+	                    ),
+	                    array(
+	                        'name' => 'description',
+	                        'label' => 'Description',
+	                        'type' => 'textarea',
+	                        'description' => 'Type Details content here.',
+	                    ),
+	                    array(
+	                        'name' => 'title',
+	                        'label' => 'Title',
+	                        'type' => 'text',
+	                        'description' => 'Type text here.',
+	                    ),
+	                )
+	            ),  // End of elemnt kc_icon 
+
+	        )
+	    ); // End add map
+
+
+	    kc_add_map(
+	        array(
 	        	// Service box 2 adddon
 	            'service_box2' => array(
 	                'name' => 'Service Box 2',
 	                'description' => __('Service box addons', 'KingComposer'),
+	                'icon' => 'sl-paper-plane',
+	                'category' => 'My-Theme',
+	                'params' => array(
+	                    array(
+	                        'name' => 'img',
+	                        'label' => 'Upload Image',
+	                        'type' => 'attach_image',
+	                        'description' => 'Upload image here.',
+	                    ),
+	                    array(
+	                        'name' => 'title',
+	                        'label' => 'Title',
+	                        'type' => 'text',
+	                        'description' => 'Type text here.',
+	                    ),
+	                    array(
+	                        'name' => 'description',
+	                        'label' => 'Description',
+	                        'type' => 'textarea',
+	                        'description' => 'Type Details content here.',
+	                    ),
+	                    array(
+	                        'name' => 'link',
+	                        'label' => 'Link',
+	                        'type' => 'link',
+	                        'description' => ''
+	                    ),
+	                )
+	            ),  // End of elemnt kc_icon 
+
+	        )
+	    ); // End add map
+
+
+	    kc_add_map(
+	        array(
+	        	// Case study adddon
+	            'case_study_box' => array(
+	                'name' => 'Case study Box',
+	                'description' => __('Case study box addons', 'KingComposer'),
 	                'icon' => 'sl-paper-plane',
 	                'category' => 'My-Theme',
 	                'params' => array(

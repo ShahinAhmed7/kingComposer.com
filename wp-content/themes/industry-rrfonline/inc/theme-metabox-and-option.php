@@ -112,6 +112,12 @@ $options[]    = array(
                     'type'  => 'switcher',
                     'title' => 'Enable page title',
                     'default' => true
+                ), 
+                array(
+                    'id'    => 'custom_title',
+                    'type'  => 'textarea',
+                    'title' => 'Add page custom title',
+                     'dependency' => array('enable_title', '==', 'true'),
                 ),               
             ),
         ),

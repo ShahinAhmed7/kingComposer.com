@@ -198,15 +198,90 @@ a.boxed-btn {
 }
 
 
+/*counter area css*/
+.counter-box-markup h2 {
+    font-size: 74px;
+    font-weight: 300;
+    color: #555555;
+    margin-bottom: 0;
+    line-height: 78px;
+}
 
+/*single service css*/
+.widget_nav_menu.kc-elm {
+    border: 1px solid #d2dce6;
+    /* padding: 15px 0px; */
+}
 
+.widget_nav_menu.kc-elm ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
+.widget_nav_menu.kc-elm li {
+}
 
+.widget_nav_menu.kc-elm li a {
+    color: #545d67;
+    font-weight: 600;
+    padding: 15px;
+    display: block;
+    border-bottom: 1px solid #d2dce6;
+    font-size: 12px;
+    transition: .3s;
+}
 
+.widget_nav_menu.kc-elm li:last-child a {
+    border-bottom: none;
+}
 
+.widget_nav_menu.kc-elm li a:hover {
+    background: #4bbc33;
+    color: #fff;
+}
 
+/*case study css*/
+.case-box-image {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0;
+}
 
+.case-study-box-markup {
+    position: relative;
+}
 
+.case-study-box-markup {
+    padding-right: 42%;
+    padding-bottom: 30px;
+    border: 1px solid #f2f4f5;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    transition: .4s;
+}
+
+.case-study-box-markup h2 {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.case-study-btn {
+    font-size: 12px;
+    color: #f3ca32;
+    font-weight: 600;
+}
+
+.case-study-box-markup p {
+    margin-bottom: 5px;
+}
+.case-study-box-markup:hover {
+    box-shadow: 0px 0px 40px #ddd;
+}
 
 
 

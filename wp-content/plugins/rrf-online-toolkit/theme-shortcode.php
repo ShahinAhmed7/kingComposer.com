@@ -47,23 +47,23 @@ function service_box_shortcode($atts){
     $service_box ='<div class="service-box-markup">';
 
     if($icon_type == 1) {
-    	$service_box .='<div class="service-icon">
-			<i class="'.esc_attr($fa_icon).'"></i>
-    	</div>';
+        $service_box .='<div class="service-icon">
+            <i class="'.esc_attr($fa_icon).'"></i>
+        </div>';
     } else{
 
-    	$service_image_array = wp_get_attachment_image_src($img_icon, 'thumbnail' );
-    	$service_box .='<div class="service-box-image">
-			<img src="'.esc_url($service_image_array[0]).'" alt="'.esc_html($title).'">
-    	</div>';
+        $service_image_array = wp_get_attachment_image_src($img_icon, 'thumbnail' );
+        $service_box .='<div class="service-box-image">
+            <img src="'.esc_url($service_image_array[0]).'" alt="'.esc_html($title).'">
+        </div>';
     }
 
     if(!empty($title)) {
-    	 $service_box .= '<h2>'.esc_html($title).'</h2>';
+         $service_box .= '<h2>'.esc_html($title).'</h2>';
     }
 
     if(!empty($description)) {
-    	 $service_box .= ''.wpautop( esc_html($description) ).'';
+         $service_box .= ''.wpautop( esc_html($description) ).'';
     }
 
     $service_box .= '</div>';
@@ -75,7 +75,50 @@ add_shortcode('service_box', 'service_box_shortcode');
 
 
 
-//industry service box shortcode
+
+//industry counter box shortcode
+function counter_box_shortcode($atts){
+    extract( shortcode_atts( array(
+        'icon_type' => 1,
+        'fa_icon' => 'fa fa-star',
+        'img_icon' => '',
+        'title' => '',
+        'description' => ''
+    ), $atts) );
+
+
+    $counetr_box ='<div class="counter-box-markup text-center">';
+
+    if($icon_type == 1) {
+    	$counetr_box .='<div class="service-icon">
+			<i class="'.esc_attr($fa_icon).'"></i>
+    	</div>';
+    } else{
+
+    	$counter_image_array = wp_get_attachment_image_src($img_icon, 'thumbnail' );
+    	$counetr_box .='<div class="service-box-image">
+			<img src="'.esc_url($counter_image_array[0]).'" alt="'.esc_html($title).'">
+    	</div>';
+    }
+
+    if(!empty($description)) {
+         $counetr_box .= ''.wpautop( esc_html($description) ).'';
+    }
+
+    if(!empty($title)) {
+    	 $counetr_box .= '<h2>'.esc_html($title).'</h2>';
+    }
+
+    $counetr_box .= '</div>';
+
+    return $counetr_box;
+
+}
+add_shortcode('counetr_box', 'counter_box_shortcode');  
+
+
+
+//industry service box2 shortcode
 function service_box_shortcode2($atts){
     extract( shortcode_atts( array(
         'img' => '',
@@ -112,6 +155,45 @@ function service_box_shortcode2($atts){
 
 }
 add_shortcode('service_box2', 'service_box_shortcode2');  
+
+
+
+
+//industry case study shortcode
+function case_study_shortcode($atts){
+    extract( shortcode_atts( array(
+        'img' => '',
+        'title' => '',
+        'description' => '',
+        'link' => ''
+    ), $atts) );
+
+
+    $case_study_box ='<div class="case-study-box-markup">';
+
+        $case_study_image_array = wp_get_attachment_image_src($img, 'large' );
+        $case_study_box .='<div style="background-image:url('.esc_url($case_study_image_array[0]).')" class="case-box-image"></div>';
+
+
+    if(!empty($title)) {
+         $case_study_box .= '<h2>'.esc_html($title).'</h2>';
+    }
+
+    if(!empty($description)) {
+         $case_study_box .= ''.wpautop( esc_html($description) ).'';
+    }
+
+     if(!empty($link)) {
+        $link_array = explode('|', $link);
+         $case_study_box .= '<a class="case-study-btn" href="'.$link_array[0].'" targer="'.$link_array[2].'">'.$link_array[1].'</a>';
+    }
+
+    $case_study_box .= '</div>';
+
+    return $case_study_box;
+
+}
+add_shortcode('case_study_box', 'case_study_shortcode');  
 
 
 

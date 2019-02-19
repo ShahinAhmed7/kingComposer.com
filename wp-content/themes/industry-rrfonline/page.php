@@ -25,6 +25,13 @@ if(array_key_exists('enable_title', $page_meta)) {
 }
 // page title end
 
+// custom title
+if(array_key_exists('custom_title', $page_meta)) {
+	$custom_title = $page_meta['custom_title'];
+} else{
+	$custom_title = '';
+}
+
 get_header(); ?>
 
 <?php if($enable_title == true) : ?>
@@ -32,7 +39,14 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12	">
-				<h2><?php the_title(); ?></h2>
+				<?php if(empty($custom_title)) : ?>
+					<h2><?php the_title(); ?></h2>
+				<?php else : ?>
+				<div class="page-custom-title">
+					<?php echo wpautop($custom_title); ?>
+				</div>
+				<?php endif; ?>
+
 				<?php if(function_exists('bcn_display')) {
 					bcn_display();
 				} ?>

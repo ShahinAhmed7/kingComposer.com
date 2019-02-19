@@ -241,3 +241,56 @@ a, input[type="submit"], button {
     width: 18%;
 }
 
+
+
+/*bradcamp css*/
+.breadcamp-area {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.breadcamp-area:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: #111;
+    opacity: .5;
+    z-index: -1;
+}
+
+.breadcamp-area h2, .breadcamp-area a, .breadcamp-area span {
+    color: #fff;
+    font-weight: 300;
+}
+
+.breadcamp-area h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.page-custom-title p:last-child {
+    margin-bottom: 0;
+}
+
+.page-custom-title p {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+.page-custom-title {
+    margin-bottom: 20px;
+}
+
+
+
+
+
