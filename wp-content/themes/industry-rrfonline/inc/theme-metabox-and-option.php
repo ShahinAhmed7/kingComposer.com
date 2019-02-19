@@ -98,7 +98,7 @@ $options[]    = array(
 
 
 $options[]    = array(
-    'id'        => 'page_metabox',
+    'id'        => 'theme_page_meta_option',
     'title'     => 'page Options',
     'post_type' => 'page',
     'context'   => 'normal',
@@ -108,24 +108,10 @@ $options[]    = array(
             'name'  => 'theme__metabox',
             'fields' => array(
                 array(
-                    'id'    => 'text_color',
-                    'type'  => 'color_picker',
-                    'title' => 'Slides text color',
-                    'default' => '#333'
-                ), 
-                array(
-                    'id'    => 'enable_overlay',
+                    'id'    => 'enable_title',
                     'type'  => 'switcher',
-                    'title' => 'Enable overlay',
-                    'default' => false
-                ), 
-                array(
-                    'id'    => 'overlay_opacity',
-                    'type'  => 'number',
-                    'title' => 'Overlay opacity',
-                    'desc' => 'Type a number of overlay opacity. 1 - 100. Number only.',
-                    'default' => 70,
-                    'dependency' => array('enable_overlay', '==', 'true'),
+                    'title' => 'Enable page title',
+                    'default' => true
                 ),               
             ),
         ),

@@ -231,7 +231,6 @@ function main_slider_shortcode($atts){
         } else{
             $overlay_opacity = 70;
         }
-
         // optional slide meta theme color end
 
 
