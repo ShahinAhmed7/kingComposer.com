@@ -6,33 +6,9 @@
  *
  * @package Industry_RRFOnline
  */
-
-// page title start
-if(get_post_meta( $post->ID, 'theme_page_meta_option', true )){
-	$page_meta = get_post_meta( $post->ID, 'theme_page_meta_option', true );
-} else{
-	$page_meta = array();
-}
-
-if(array_key_exists('enable_title', $page_meta)) {
-	$enable_title = $page_meta['enable_title'];
-} else{
-	$enable_title = true;
-}
-
-// page title end
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if($enable_title == true) : ?>
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-	<?php endif; ?>
-
-	<?php industry_rrfonline_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content();

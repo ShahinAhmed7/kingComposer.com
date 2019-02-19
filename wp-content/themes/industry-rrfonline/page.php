@@ -11,10 +11,39 @@
  *
  * @package Industry_RRFOnline
  */
+// page title start
+if(get_post_meta( $post->ID, 'theme_page_meta_option', true )){
+	$page_meta = get_post_meta( $post->ID, 'theme_page_meta_option', true );
+} else{
+	$page_meta = array();
+}
 
-get_header();
-?>
+if(array_key_exists('enable_title', $page_meta)) {
+	$enable_title = $page_meta['enable_title'];
+} else{
+	$enable_title = true;
+}
+// page title end
 
+get_header(); ?>
+
+<?php if($enable_title == true) : ?>
+<div style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);" class="breadcamp-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12	">
+				<h2><?php the_title(); ?></h2>
+				<?php if(function_exists('bcn_display')) {
+					bcn_display();
+				} ?>
+			</div>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
+
+
+<?php while ( have_posts() ) : the_post(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -22,9 +51,6 @@ get_header();
 			<div class="row">
 				<div class="col-md-12">
 					<?php
-					while ( have_posts() ) :
-						the_post();
-
 						get_template_part( 'template-parts/content', 'page' );
 
 						// If comments are open or we have at least one comment, load up the comment template.
@@ -32,7 +58,6 @@ get_header();
 							comments_template();
 						endif;
 
-					endwhile; // End of the loop.
 					?>
 				</div>
 			</div>
@@ -41,5 +66,7 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php
-get_footer();
+<?php endwhile;  // End of the loop. ?> 
+					
+
+<?php get_footer();
