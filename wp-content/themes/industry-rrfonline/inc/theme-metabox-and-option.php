@@ -5,7 +5,7 @@ require get_template_directory() . '/inc/cs-framework/cs-framework.php';
 function theme_metabox($options) {
 $options        = array();
 
-
+// theme slider metabox
 $options[]    = array(
     'id'        => 'theme_slide_meta',
     'title'     => 'Slides Options',
@@ -97,6 +97,7 @@ $options[]    = array(
 );
 
 
+// page metabox
 $options[]    = array(
     'id'        => 'theme_page_meta_option',
     'title'     => 'page Options',
@@ -112,6 +113,18 @@ $options[]    = array(
                     'type'  => 'switcher',
                     'title' => 'Enable page title',
                     'default' => true
+                ), 
+                array(
+                    'id'    => 'text_align',
+                    'type'  => 'select',
+                    'title' => 'Text align',
+                    'default' => 'left',
+                    'options' => array(
+                        'left' => 'Left',
+                        'center' => 'Center',
+                        'right' => 'Right',
+                      ),
+                    'dependency' => array('enable_title', '==', 'true'),
                 ), 
                 array(
                     'id'    => 'custom_title',

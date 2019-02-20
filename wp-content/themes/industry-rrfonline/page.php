@@ -32,13 +32,20 @@ if(array_key_exists('custom_title', $page_meta)) {
 	$custom_title = '';
 }
 
+// text align
+if(array_key_exists('text_align', $page_meta)) {
+	$text_align = $page_meta['text_align'];
+} else{
+	$text_align = 'left';
+}
+
 get_header(); ?>
 
 <?php if($enable_title == true) : ?>
 <div style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);" class="breadcamp-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12	">
+			<div class="col-md-12 text-<?php echo $text_align; ?>">
 				<?php if(empty($custom_title)) : ?>
 					<h2><?php the_title(); ?></h2>
 				<?php else : ?>
