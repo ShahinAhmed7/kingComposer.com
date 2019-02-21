@@ -143,7 +143,9 @@ a, input[type="submit"], button {
     color: #fff;
     border: none;
 }
-
+.header-2 .header-bottom-area {
+    background: #50ba3d;
+}
 .header-search-form label {
     width: 100%;
 }

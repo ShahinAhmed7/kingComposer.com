@@ -32,7 +32,7 @@ if(array_key_exists('custom_title', $page_meta)) {
 	$custom_title = '';
 }
 
-// text align
+// bradcamp text align
 if(array_key_exists('text_align', $page_meta)) {
 	$text_align = $page_meta['text_align'];
 } else{

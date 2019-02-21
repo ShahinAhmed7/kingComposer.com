@@ -9,6 +9,21 @@
  * @package Industry_RRFOnline
  */
 
+// page meta title start
+if(is_page() && get_post_meta ($post->ID, 'theme_page_meta_option', true )){
+	$page_meta = get_post_meta( $post->ID, 'theme_page_meta_option', true );
+} else{
+	$page_meta = array();
+}
+
+// header style
+if(array_key_exists('header_style', $page_meta)) {
+	$header_style = $page_meta['header_style'];
+} else{
+	$header_style = '1';
+}
+
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -23,56 +38,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<header class="side-header">
-		<div class="header-top-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="site-branding">
-							<?php
-							the_custom_logo();
-							if ( is_front_page() && is_home() ) :
-								?>
-								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-								<?php
-							else :
-								?>
-								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-								<?php
-							endif;
-							 ?>
-						</div><!-- .site-branding -->
-					</div>
-
-					<div class="col-md-8">
-						<div class="header-right-btn">
-							<a href="#">Featured in New York Times, Forbes & Mashable</a>
-							<a href="#">25 years of industrial experiences</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="header-bottom-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8">
-						<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						) );
-						?>
-					</div>
-					<div class="col-md-4">
-						<div class="header-search-form">
-							<?php get_search_form(); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+	<?php get_template_part('template-parts/header/header-'.$header_style.''); ?>
 
 	<div id="content" class="site-content">
+
+
+
+
+
+
+
+
+

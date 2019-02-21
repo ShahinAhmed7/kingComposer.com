@@ -108,6 +108,16 @@ $options[]    = array(
         array(
             'name'  => 'theme__metabox',
             'fields' => array(
+                 array(
+                    'id'    => 'header_style',
+                    'type'  => 'select',
+                    'title' => 'Header style',
+                    'default' => '1',
+                    'options' => array(
+                        '1' => 'Header 1',
+                        '2' => 'Header 2',
+                      ),
+                ), 
                 array(
                     'id'    => 'enable_title',
                     'type'  => 'switcher',
