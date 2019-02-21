@@ -32,20 +32,26 @@
 	<?php industry_rrfonline_post_thumbnail(); ?>
 
 	<div class="entry-content">
+	<?php 
+		if(is_single()) {
+			the_content( sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'industry-rrfonline' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
+		} else{
+			the_excerpt();
+			echo '<p class="readmore-wrap"><a href="' . esc_url( get_permalink() ) . '" class="boxed-btn">Read more</a></p>';
+		}
+	 ?>
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'industry-rrfonline' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'industry-rrfonline' ),
 			'after'  => '</div>',
