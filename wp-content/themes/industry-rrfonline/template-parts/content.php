@@ -43,7 +43,6 @@
 							'class' => array(),
 						),
 					)
-					
 				),
 				get_the_title()
 			) );
