@@ -10,6 +10,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php if(has_post_thumbnail()) : ?>
+	<div class="blog-featured-content">
+		<?php the_post_thumbnail( 'theme-image-size' ) ?>
+	</div>
+	<?php endif; ?>
+
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :

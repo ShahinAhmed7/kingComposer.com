@@ -292,7 +292,99 @@ a, input[type="submit"], button {
     margin-bottom: 20px;
 }
 
+/*blog area css*/
+.theme-padding-area {
+    padding: 80px 0px;
+}
 
+.theme-article-list article, .widget-area .widget {
+    border: 1px solid #f1f1f1;
+    padding: 30px;
+    margin-bottom: 50px;
+}
 
+.theme-article-list {
+    margin-right: 40px;
+}
+
+.theme-article-list a {
+    color: #333;
+}
+
+.theme-article-list h2, .widget-area .widget h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.entry-meta, .entry-footer {
+    font-size: 90%;
+}
+
+.entry-meta {
+    margin-bottom: 20px;
+}
+
+footer.entry-footer {
+    margin-top: 30px;
+}
+
+.entry-meta > span, .entry-footer > span {
+    padding-right: 20px;
+}
+
+.blog-featured-content {
+    margin-bottom: 20px;
+}
+
+.widget-area .widget a {
+    color: #333;
+}
+
+.widget-area .widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 30px;
+}
+
+.calendar_wrap table {
+    width: 100%;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendar_wrap table th, .calendar_wrap table td {
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.calendar_wrap table th {
+    background-color: #ddd;
+}
+
+.widget-area .widget ul ul {
+    padding-left: 10px;
+}
+
+.rssSummary {
+    font-size: 90%;
+}
+
+.widget_rss li {
+    margin-bottom: 18px;
+}
+
+.widget-area .widget.widget_rss a {
+    font-weight: 700;
+}
+
+.rss-date {
+    font-size: 90%;
+}
+
+.widget img {
+    height: auto;
+}
 
 
