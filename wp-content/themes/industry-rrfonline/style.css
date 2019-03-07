@@ -466,6 +466,515 @@ form.post-password-form input[type="submit"], .search-form input[type="submit"] 
 
 
 
+/*******************
+***** 6. Blog Page CSS
+********************/
+article.light-single-blog-post.sticky {
+  position: relative;
+}
+.single .light-single-blog-post {
+  margin-bottom: 0;
+}
+article.light-single-blog-post.sticky:after {
+  content: "\f08d";
+    font-family: FontAwesome;
+    position: absolute;right: 20px;top: 20px;color: #ffbe2f;transform: rotate(30deg);
+font-size: 30px;
+}
+.blog-page-wrapper {
+    padding: 80px 0;
+}
+.post-thumbnail {
+    margin-bottom: 25px;
+}
+.entry-title a {
+    color: #000000;
+    font-size: 24px;
+}
+.entry-title {
+    margin: 15px 0;
+}
+ul.posted-meta li {
+    display: inline-block;
+    margin-right: 30px;
+    color: #666666;
+    font-size: 13px;
+    font-weight: 300;
+}
+ul.posted-meta li i {
+    margin-right: 5px;
+    color: #666666;
+}
+ul.posted-meta li a {
+    color: #666666;
+    font-size: 13px;
+    font-weight: 300;
+}
+ul.posted-meta {
+    margin-bottom: 14px;padding-left: 0;
+}
+.light-single-blog-post {
+    color: #666666;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+a.light-read-more-btn {
+    border: 1px solid;
+    color: #000000;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    padding: 8px 30px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+a.light-read-more-btn:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    -webkit-transition: .3s;
+    transition: .3s;
+    content: "";
+    background: #000;
+    z-index: -1;
+}
+a.light-read-more-btn:hover:after {
+    width: 100%;
+}
+a.light-read-more-btn:hover {
+    color: #fff;
+}
+.post-date {
+    color: #666666;
+    font-weight: 300;
+}
+.post-date p {
+    margin: 0px;
+}
+.post-title {
+    color: #000;
+    margin-top: 10px;
+}
+blockquote {
+    color: #666666;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 30px;
+}
+.posted-footer {
+  margin: 45px 0 0;
+  overflow: hidden;
+  padding: 24px 0 10px;
+}
+
+.postd-footer-left {
+    float: left;
+    width: 75%
+}
+.postd-footer-right.light-post-share {
+    float: right;
+    width: 25%;
+    text-align: right
+}
+.postd-footer-left li {
+    display: inline-block;
+}
+.light-post-share li {
+    display: inline-block;
+}
+.posted-footer a {
+    color: #000;
+    font-weight: 400;
+}
+.postd-footer-left li a:after {
+    content: ",";
+}
+.postd-footer-left li:last-child a:after {
+    content: "";
+}
+.postd-footer-right.light-post-share li a {
+    color: #000;
+    font-size: 13px;
+    padding: 0 5px;
+}
+.postd-footer-right.light-post-share li:first-child {
+    margin-right: 5px;
+}
+.postd-footer-left li:first-child {
+    margin-right: 5px;
+}
+.wp-caption-text {
+    background: #f1f1f1;
+    padding: 5px 10px;
+    margin-bottom: 10px
+}
+
+.post-navigation .nav-links div {
+    float: left;
+    width: 50%;
+}
+.post-navigation .nav-links div.nav-next {
+    text-align: right;
+}
+
+.post-navigation .nav-links {
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+/*******************
+***** 7. Widget CSS
+********************/
+.screen-reader-text {
+    display: none;
+}
+
+.widget_pages .children {
+    margin-top: 15px;
+}
+.widget select {
+    max-width: 100%;
+}
+.widget_nav_menu .sub-menu {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.search-form input[type="search"] {
+    border: medium none;
+    line-height: 32px;
+    padding: 7px 0 7px 10px;
+    width: 100%;
+    font-size: 16px;
+    color: #888888;
+    font-weight: 300;
+}
+.search-form input[type="submit"] {
+    background: #000 none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    float: right;
+    height: 46px;
+    line-height: 40px;
+    padding: 4px 8px 5px;
+}
+.search-form > * {
+    float: left;
+}
+.search-form label {
+    width: 74%;
+}
+.search-form {
+    border: 1px solid #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.search-form > label {
+    margin: 0;
+}
+.widget {
+    margin-bottom: 40px;
+}
+.widget-title {
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+.widget ul li {
+    margin-bottom: 15px;
+}
+.widget ul li a {
+    color: #666666;
+    font-weight: 300;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.widget ul li a:hover {
+    color: #000;
+}
+.widget_calendar table {
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+.widget_calendar table td,
+.widget_calendar table th {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+}
+.widget_calendar table caption {
+    font-weight: 700;
+}
+.rss-date,
+.rssSummary {
+    color: #999;
+    font-size: 12px;
+    font-weight: 300;
+}
+.widget_rss cite {
+    color: #999;
+    font-size: 13px;
+    font-weight: 300;
+}
+.widget a {
+    color: #000;
+}
+
+.widget ul.children {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+.widget ul.children li:last-child {
+    margin: 0;
+}
+.widget ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget.widget_archive ul li,
+.widget.widget_categories ul li {
+    display: block;
+    font-weight: 300;
+    text-align: right;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    overflow: hidden
+}
+.widget.widget_archive ul li:after,
+.widget.widget_categories ul li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "\f105";
+    font-family: fontawesome;
+}
+.widget.widget_archive ul li a,
+.widget.widget_categories ul li a {
+    float: left;
+}
+.widget.widget_archive ul,
+.widget.widget_categories ul {
+    overflow: hidden;padding-left: 0
+}
+.widget .tagcloud a {
+    border: 1px solid;
+    color: #000;
+    display: block;
+    float: left;
+    font-size: 15px !important;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-left: 3%;
+    padding: 2px 13px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    width: 47%;
+}
+.widget .tagcloud a:hover {
+    background: #000;
+    color: #fff;
+}
+.widget .tagcloud {
+    margin-left: -3%;
+    overflow: hidden
+}
+/*******************
+***** 8. Comments CSS
+********************/
+
+.comments-title {
+    margin-bottom: 35px;
+    font-size: 30px;
+    color: #000000;
+}
+.comment-list {
+    max-width: 790px;
+}
+.comment-list,
+.children {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.says {
+    display: none;
+}
+.comment-author.vcard img {
+    float: left;
+    margin-right: 18px;
+}
+.comment-content {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 72px;
+}
+.comment-content table {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+.comment-content table td,
+.comment-content table th {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+.comment-content ol {
+    padding-left: 15px;
+}
+.comment-author.vcard img {
+    border-radius: 50%;
+    position: relative;
+    top: 10px;
+}
+b.fn {
+    color: #666;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+b.fn a,
+.comments-area a {
+    color: #000;
+}
+.comment-list > li,
+.children article {
+    margin-bottom: 30px;
+}
+.comment-metadata a time {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 300;
+}
+.reply {
+    text-align: right;
+}
+.reply a {
+    color: #666;
+}
+.children {
+    padding-left: 25px;
+}
+.comment-form p > label {
+    display: none;
+}
+.comment-form p > input,
+.comment-form p textarea {
+    border: 1px solid #cfcfcf;
+    color: #000;
+    font-size: 14px;
+    padding: 8px 0 8px 10px;
+    width: 100%;
+    -webkit-transition: .3s;
+    transition: .3s;
+    resize: none;
+}
+.comment-reply-title {
+    margin-bottom: 30px;
+}
+.logged-in .comment-reply-title {
+    margin-bottom: 30px;
+}
+.comment-form p > input:focus,
+.comment-form p textarea:focus {
+    border-color: #818181;
+    box-shadow: 0 0 13px 1px rgba(0, 0, 0, 0.2);
+}
+.comment-form-comment > label {
+    display: none;
+}
+.comment-form {
+    padding-right: 10px;
+}
+.comment-form .comment-notes {
+    display: none;
+}
+.logged-in .form-submit {
+    bottom: 4px;
+    right: 0;
+}
+.logged-in .comment-form p:nth-child(2) {
+    float: none;
+}
+.logged-in .comment-form p:not(:first-child) {
+    float: none;
+    width: 70%;
+}
+.logged-in .comment-form-comment textarea {
+    display: block;
+    width: 100%;
+}
+.comment-form p > input[type="submit"] {
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.comment-form p:not(:first-child) {
+    float: right;
+    margin-bottom: 15px;
+    width: 48%;
+}
+.comment-form p:nth-child(2) {
+    float: left;
+}
+.comment-form {
+    overflow: hidden;
+}
+/*******************
+***** 9. Search page CSS
+********************/
+
+.sin-search-resutl-post {
+    margin-bottom: 40px;
+}
+.read-more-btn {
+    border: 1px solid;
+    color: #000;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 6px 23px 7px;
+    position: relative;
+    z-index: 1;
+}
+.read-more-btn:after {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    content: "";
+    background: #000;
+    z-index: -1;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.read-more-btn:hover:after {
+    width: 100%;
+}
+.read-more-btn:hover {
+    color: #fff;
+}
+.light-archive-page-header {
+    margin: 12px 0 22px;
+}
+.page-header.light-archive-page-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    word-spacing: 1px;
+}
 
 
 

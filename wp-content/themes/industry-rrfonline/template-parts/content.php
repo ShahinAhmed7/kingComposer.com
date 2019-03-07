@@ -9,13 +9,17 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if(has_post_thumbnail()) : ?>
-	<div class="blog-featured-content">
-		<?php the_post_thumbnail( 'theme-image-size' ) ?>
-	</div>
-	<?php endif; ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('brownvent-single-article'); ?>>
+	<header class="entry-header">
+        <?php if(has_post_thumbnail() && get_post_type() != 'project') : ?>
+        <div class="brownvent-post-featured-content">
+           
+            <?php if(!is_singular()){ echo '<a href="'.get_the_permalink().'">';} ?>
+                <?php the_post_thumbnail('theme-image-size'); ?>
+            <?php if(!is_singular()){ echo '</a>';} ?>
+        </div>
+        <?php endif; ?>
 
 
 	<?php if(!is_single()) : ?>
@@ -38,8 +42,6 @@
 	</header><!-- .entry-header -->
 	<?php endif; ?>
 
-
-	<?php industry_rrfonline_post_thumbnail(); ?>
 
 	<div class="entry-content">
 	<?php 
